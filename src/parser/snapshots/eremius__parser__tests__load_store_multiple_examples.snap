@@ -1,0 +1,150 @@
+---
+source: src/parser/tests.rs
+expression: parse_to_vec(LOAD_STORE_MULTIPLE_EXAMPLES)
+---
+[
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Store,
+                    mode: DecrementBefore,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            false,
+                            true,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Load,
+                    mode: IncrementAfter,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            true,
+                            false,
+                            false,
+                            true,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Load,
+                    mode: IncrementAfter,
+                    base: Rn(
+                        0,
+                    ),
+                    write_back: NoWriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            true,
+                            true,
+                            true,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Store,
+                    mode: DecrementAfter,
+                    base: Rn(
+                        1,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            false,
+                            false,
+                            true,
+                            false,
+                            false,
+                            true,
+                            false,
+                            true,
+                            true,
+                            true,
+                            false,
+                            true,
+                            false,
+                            false,
+                            false,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+]

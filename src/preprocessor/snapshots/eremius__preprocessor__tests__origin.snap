@@ -1,0 +1,71 @@
+---
+source: src/preprocessor/tests.rs
+expression: result
+---
+Ok(
+    PreProcessResult {
+        statements: [
+            (
+                0,
+                Instruction {
+                    kind: DataProcessing {
+                        condition: AL,
+                        kind: Calculation {
+                            kind: ADD,
+                            set_flags: DontSet,
+                            destination: Rd(
+                                0,
+                            ),
+                            source: Rn(
+                                1,
+                            ),
+                            shifter: Register(
+                                Register(
+                                    2,
+                                ),
+                            ),
+                        },
+                    },
+                },
+            ),
+            (
+                12,
+                Instruction {
+                    kind: DataProcessing {
+                        condition: AL,
+                        kind: Calculation {
+                            kind: ADD,
+                            set_flags: DontSet,
+                            destination: Rd(
+                                0,
+                            ),
+                            source: Rn(
+                                1,
+                            ),
+                            shifter: Register(
+                                Register(
+                                    2,
+                                ),
+                            ),
+                        },
+                    },
+                },
+            ),
+        ],
+        symbol_table: SymbolTable {
+            table: {
+                Symbol(
+                    "func",
+                ): Number {
+                    base: 10,
+                    n: 12,
+                },
+            },
+        },
+        entry_point: 0,
+        source_map: {
+            12: 2,
+            0: 0,
+        },
+    },
+)

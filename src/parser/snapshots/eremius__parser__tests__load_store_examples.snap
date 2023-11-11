@@ -1,0 +1,549 @@
+---
+source: src/parser/tests.rs
+expression: parse_to_vec(LOAD_STORE_EXAMPLES)
+---
+[
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        1,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                0,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 0,
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        8,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                3,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 4,
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        12,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                13,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Negative,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 4,
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Store,
+                    quantity: Word,
+                    destination: Rd(
+                        2,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                1,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 16,
+                                        n: 256,
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Byte,
+                    destination: Rd(
+                        5,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                9,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 0,
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Byte,
+                    destination: Rd(
+                        3,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                8,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 3,
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Store,
+                    quantity: Byte,
+                    destination: Rd(
+                        4,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                10,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 16,
+                                        n: 512,
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        11,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                1,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Register(
+                                    Rm(
+                                        2,
+                                    ),
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Store,
+                    quantity: Byte,
+                    destination: Rd(
+                        10,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                7,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Negative,
+                                value: Register(
+                                    Rm(
+                                        4,
+                                    ),
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        11,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                3,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: ScaledRegister(
+                                    ShiftedRegister {
+                                        kind: LogicalShiftLeft,
+                                        amount: Number {
+                                            base: 10,
+                                            n: 2,
+                                        },
+                                        base: Rm(
+                                            5,
+                                        ),
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        1,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                0,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 4,
+                                    },
+                                ),
+                                mode: PreIndexed,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Store,
+                    quantity: Byte,
+                    destination: Rd(
+                        7,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                6,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Negative,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 1,
+                                    },
+                                ),
+                                mode: PreIndexed,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        3,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                9,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 4,
+                                    },
+                                ),
+                                mode: PostIndexed,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Store,
+                    quantity: Word,
+                    destination: Rd(
+                        2,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                5,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 8,
+                                    },
+                                ),
+                                mode: PostIndexed,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        0,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                15,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Immediate(
+                                    Number {
+                                        base: 10,
+                                        n: 40,
+                                    },
+                                ),
+                                mode: Offset,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        0,
+                    ),
+                    address: AddressingMode(
+                        LoadStoreAddressCode {
+                            base: Rn(
+                                1,
+                            ),
+                            offset: AddressingOffset {
+                                sign: Positive,
+                                value: Register(
+                                    Rm(
+                                        2,
+                                    ),
+                                ),
+                                mode: PostIndexed,
+                            },
+                        },
+                    ),
+                },
+            },
+        ),
+    },
+]

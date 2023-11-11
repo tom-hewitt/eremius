@@ -1,0 +1,242 @@
+---
+source: src/parser/tests.rs
+expression: parse_to_vec(LAB2_HELLO)
+---
+[
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: Branch,
+                    target: Symbol(
+                        "main",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "hello",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "Hello \\0",
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "goodbye",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "and good-bye!\\n\\0",
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Directive {
+                kind: Align,
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "main",
+        ),
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: false,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "hello",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 3,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "start",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 1,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 0,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            0,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 10,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: NE,
+                    kind: Branch,
+                    target: Symbol(
+                        "start",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "skip",
+        ),
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: false,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "goodbye",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 3,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 2,
+                    },
+                },
+            },
+        ),
+    },
+]

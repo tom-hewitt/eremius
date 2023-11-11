@@ -1,0 +1,758 @@
+---
+source: src/parser/tests.rs
+expression: parse_to_vec(LAB2_AGE_HISTORY)
+---
+[
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: Branch,
+                    target: Symbol(
+                        "main",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "born",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "you were born in \\0",
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "were",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "you were \\0",
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "in",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                " in \\0",
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "are",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "you are \\0",
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "this",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                " this year\\n\\0",
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Directive {
+                kind: Align,
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "main",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: LoadRegisterConstant {
+                    condition: AL,
+                    destination: Rd(
+                        4,
+                    ),
+                    value: Number {
+                        base: 10,
+                        n: 2022,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: LoadRegisterConstant {
+                    condition: AL,
+                    destination: Rd(
+                        5,
+                    ),
+                    value: Number {
+                        base: 10,
+                        n: 2003,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: LoadRegisterConstant {
+                    condition: AL,
+                    destination: Rd(
+                        6,
+                    ),
+                    value: Number {
+                        base: 10,
+                        n: 0,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: LoadRegisterConstant {
+                    condition: AL,
+                    destination: Rd(
+                        7,
+                    ),
+                    value: Number {
+                        base: 10,
+                        n: 1,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: false,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "born",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 3,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                5,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 4,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 10,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 0,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Calculation {
+                        kind: ADD,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            6,
+                        ),
+                        source: Rn(
+                            5,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 1,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "start",
+        ),
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            6,
+                        ),
+                        shifter: Register(
+                            Register(
+                                4,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: EQ,
+                    kind: Branch,
+                    target: Symbol(
+                        "skip",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: false,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "were",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 3,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                7,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 4,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: false,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "in",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 3,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                6,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 4,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 10,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 0,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Calculation {
+                        kind: ADD,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            6,
+                        ),
+                        source: Rn(
+                            6,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 1,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Calculation {
+                        kind: ADD,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            7,
+                        ),
+                        source: Rn(
+                            7,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 1,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: Branch,
+                    target: Symbol(
+                        "start",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "skip",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: false,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "are",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 3,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                7,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 4,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: false,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "this",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 3,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 2,
+                    },
+                },
+            },
+        ),
+    },
+]

@@ -1,0 +1,2839 @@
+---
+source: src/parser/tests.rs
+expression: parse_to_vec(LAB4)
+---
+[
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "print_char",
+        ),
+        statement: Some(
+            Directive {
+                kind: Constant {
+                    value: Number {
+                        base: 10,
+                        n: 0,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "stop",
+        ),
+        statement: Some(
+            Directive {
+                kind: Constant {
+                    value: Number {
+                        base: 10,
+                        n: 2,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "print_str",
+        ),
+        statement: Some(
+            Directive {
+                kind: Constant {
+                    value: Number {
+                        base: 10,
+                        n: 3,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "print_no",
+        ),
+        statement: Some(
+            Directive {
+                kind: Constant {
+                    value: Number {
+                        base: 10,
+                        n: 4,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "cLF",
+        ),
+        statement: Some(
+            Directive {
+                kind: Constant {
+                    value: Number {
+                        base: 10,
+                        n: 10,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: false,
+                    destination: Register(
+                        13,
+                    ),
+                    label: Symbol(
+                        "_stack",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: Branch,
+                    target: Symbol(
+                        "main",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Space {
+                        size: 100,
+                        fill: None,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "_stack",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "wasborn",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "This person was born on ",
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "was",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "This person was ",
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "on",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                " on ",
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "is",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "This person is ",
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "today",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                " today!",
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "willbe",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "This person will be ",
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Directive {
+                kind: Align,
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "pDay",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Words {
+                        words: [
+                            23,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "pMonth",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Words {
+                        words: [
+                            11,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "pYear",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Words {
+                        words: [
+                            2005,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "printDate",
+        ),
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Store,
+                    mode: DecrementBefore,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            true,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_no",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Immediate(
+                            Character(
+                                '/',
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_char",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                1,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_no",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Immediate(
+                            Character(
+                                '/',
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_char",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                2,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_no",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Immediate(
+                            Symbol(
+                                Symbol(
+                                    "cLF",
+                                ),
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_char",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Load,
+                    mode: IncrementAfter,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            true,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            15,
+                        ),
+                        shifter: Register(
+                            Register(
+                                14,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "printAgeHistory",
+        ),
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Store,
+                    mode: DecrementBefore,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            true,
+                            false,
+                            false,
+                            false,
+                            true,
+                            true,
+                            true,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            6,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Calculation {
+                        kind: ADD,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            4,
+                        ),
+                        source: Rn(
+                            2,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 1,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            5,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 1,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "wasborn",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                6,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Store,
+                    mode: DecrementBefore,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: BranchWithLink,
+                    target: Symbol(
+                        "printDate",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Load,
+                    mode: IncrementAfter,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "loop1",
+        ),
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        0,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "pYear",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            4,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: CC,
+                    kind: Branch,
+                    target: Symbol(
+                        "inner",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: NE,
+                    kind: Branch,
+                    target: Symbol(
+                        "or2",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        7,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "pMonth",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            1,
+                        ),
+                        shifter: Register(
+                            Register(
+                                7,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: LT,
+                    kind: Branch,
+                    target: Symbol(
+                        "inner",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "or2",
+        ),
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            4,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: NE,
+                    kind: Branch,
+                    target: Symbol(
+                        "end1",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            1,
+                        ),
+                        shifter: Register(
+                            Register(
+                                7,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: NE,
+                    kind: Branch,
+                    target: Symbol(
+                        "end1",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        0,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "pDay",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            6,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: GE,
+                    kind: Branch,
+                    target: Symbol(
+                        "end1",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "inner",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "was",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                5,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_no",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "on",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                6,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            2,
+                        ),
+                        shifter: Register(
+                            Register(
+                                4,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Store,
+                    mode: DecrementBefore,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: BranchWithLink,
+                    target: Symbol(
+                        "printDate",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Load,
+                    mode: IncrementAfter,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Calculation {
+                        kind: ADD,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            4,
+                        ),
+                        source: Rn(
+                            4,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 1,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Calculation {
+                        kind: ADD,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            5,
+                        ),
+                        source: Rn(
+                            5,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 1,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: Branch,
+                    target: Symbol(
+                        "loop1",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "end1",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        0,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "pMonth",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            1,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: NE,
+                    kind: Branch,
+                    target: Symbol(
+                        "else1",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        0,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "pDay",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            6,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: NE,
+                    kind: Branch,
+                    target: Symbol(
+                        "else1",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "is",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                5,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_no",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "today",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Immediate(
+                            Symbol(
+                                Symbol(
+                                    "cLF",
+                                ),
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_char",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: Branch,
+                    target: Symbol(
+                        "end2",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "else1",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "willbe",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                5,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_no",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "on",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                6,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            2,
+                        ),
+                        shifter: Register(
+                            Register(
+                                4,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Store,
+                    mode: DecrementBefore,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: BranchWithLink,
+                    target: Symbol(
+                        "printDate",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Load,
+                    mode: IncrementAfter,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            true,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "end2",
+        ),
+        statement: Some(
+            Instruction {
+                kind: LoadStoreMultiple {
+                    condition: AL,
+                    kind: Load,
+                    mode: IncrementAfter,
+                    base: Rn(
+                        13,
+                    ),
+                    write_back: WriteBack,
+                    register_list: RegisterList {
+                        registers: [
+                            true,
+                            false,
+                            false,
+                            false,
+                            true,
+                            true,
+                            true,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                            false,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            15,
+                        ),
+                        shifter: Register(
+                            Register(
+                                14,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "another",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "Another person",
+                            ),
+                            Byte(
+                                10,
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Directive {
+                kind: Align,
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "main",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: LoadRegisterConstant {
+                    condition: AL,
+                    destination: Rd(
+                        4,
+                    ),
+                    value: Number {
+                        base: 16,
+                        n: 36984440,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            5,
+                        ),
+                        shifter: Register(
+                            Register(
+                                4,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            6,
+                        ),
+                        shifter: Register(
+                            Register(
+                                4,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        0,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "pDay",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        1,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "pMonth",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            2,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 2000,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: BranchWithLink,
+                    target: Symbol(
+                        "printAgeHistory",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "another",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 13,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            1,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 11,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            2,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 2000,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: BranchWithLink,
+                    target: Symbol(
+                        "printAgeHistory",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: LoadRegisterConstant {
+                    condition: AL,
+                    destination: Rd(
+                        0,
+                    ),
+                    value: Number {
+                        base: 16,
+                        n: 36984440,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            4,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: EQ,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            5,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: EQ,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            6,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: NE,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "whoops1",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: NE,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: AL,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "_stack",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            13,
+                        ),
+                        shifter: Register(
+                            Register(
+                                0,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: AddressRegister {
+                    condition: NE,
+                    long: true,
+                    destination: Register(
+                        0,
+                    ),
+                    label: Symbol(
+                        "whoops2",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: NE,
+                    immediate: Symbol(
+                        Symbol(
+                            "print_str",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Symbol(
+                        Symbol(
+                            "stop",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: Some(
+            "whoops1",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "\\n** BUT YOU CORRUPTED REGISTERS!  **\\n",
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "whoops2",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Bytes {
+                        bytes: [
+                            String(
+                                "\\n** BUT YOUR STACK DIDN'T BALANCE!  **\\n",
+                            ),
+                            Byte(
+                                0,
+                            ),
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+]

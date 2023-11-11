@@ -1,0 +1,161 @@
+---
+source: src/parser/tests.rs
+expression: parse_to_vec(BRANCH_EXAMPLES)
+---
+[
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: Branch,
+                    target: Symbol(
+                        "label",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: CC,
+                    kind: Branch,
+                    target: Symbol(
+                        "label",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: EQ,
+                    kind: Branch,
+                    target: Symbol(
+                        "label",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            15,
+                        ),
+                        shifter: Immediate(
+                            Number {
+                                base: 10,
+                                n: 0,
+                            },
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: AL,
+                    kind: BranchWithLink,
+                    target: Symbol(
+                        "func",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "func",
+        ),
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            15,
+                        ),
+                        shifter: Register(
+                            Register(
+                                14,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Move {
+                        kind: Move,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            14,
+                        ),
+                        shifter: Register(
+                            Register(
+                                15,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: None,
+    },
+    Line {
+        label: None,
+        statement: Some(
+            PseudoInstruction {
+                kind: LoadRegisterConstant {
+                    condition: AL,
+                    destination: Rd(
+                        15,
+                    ),
+                    value: Symbol(
+                        Symbol(
+                            "func",
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+]

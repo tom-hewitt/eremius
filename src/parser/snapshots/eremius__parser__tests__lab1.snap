@@ -1,0 +1,297 @@
+---
+source: src/parser/tests.rs
+expression: parse_to_vec(LAB1)
+---
+[
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        0,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "tom",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        1,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "jill",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        2,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "jack",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        3,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "one",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: LoadStore {
+                    condition: AL,
+                    kind: Load,
+                    quantity: Word,
+                    destination: Rd(
+                        4,
+                    ),
+                    address: Expression(
+                        Symbol(
+                            Symbol(
+                                "zero",
+                            ),
+                        ),
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "loop",
+        ),
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Calculation {
+                        kind: ADD,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            0,
+                        ),
+                        source: Rn(
+                            0,
+                        ),
+                        shifter: Register(
+                            Register(
+                                1,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Calculation {
+                        kind: SUB,
+                        set_flags: DontSet,
+                        destination: Rd(
+                            2,
+                        ),
+                        source: Rn(
+                            2,
+                        ),
+                        shifter: Register(
+                            Register(
+                                3,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: DataProcessing {
+                    condition: AL,
+                    kind: Comparison {
+                        kind: CMP,
+                        source: Rn(
+                            2,
+                        ),
+                        shifter: Register(
+                            Register(
+                                4,
+                            ),
+                        ),
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: Branch {
+                    condition: NE,
+                    kind: Branch,
+                    target: Symbol(
+                        "loop",
+                    ),
+                },
+            },
+        ),
+    },
+    Line {
+        label: None,
+        statement: Some(
+            Instruction {
+                kind: SuperVisorCall {
+                    condition: AL,
+                    immediate: Number {
+                        base: 10,
+                        n: 2,
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "jack",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Words {
+                        words: [
+                            3,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "jill",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Words {
+                        words: [
+                            4,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "tom",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Words {
+                        words: [
+                            0,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "one",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Words {
+                        words: [
+                            1,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+    Line {
+        label: Some(
+            "zero",
+        ),
+        statement: Some(
+            Directive {
+                kind: Definition {
+                    kind: Words {
+                        words: [
+                            0,
+                        ],
+                    },
+                },
+            },
+        ),
+    },
+]

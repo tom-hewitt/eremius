@@ -1,0 +1,40 @@
+---
+source: src/preprocessor/tests.rs
+expression: result
+---
+Ok(
+    PreProcessResult {
+        statements: [
+            (
+                0,
+                PseudoInstruction {
+                    kind: LoadRegisterConstant {
+                        condition: AL,
+                        destination: Rd(
+                            15,
+                        ),
+                        value: Symbol(
+                            Symbol(
+                                "func",
+                            ),
+                        ),
+                    },
+                },
+            ),
+        ],
+        symbol_table: SymbolTable {
+            table: {
+                Symbol(
+                    "func",
+                ): Number {
+                    base: 10,
+                    n: 0,
+                },
+            },
+        },
+        entry_point: 0,
+        source_map: {
+            0: 1,
+        },
+    },
+)
