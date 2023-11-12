@@ -1,5 +1,7 @@
 # Eremius
 
+![eremiusheader](https://github.com/tom-hewitt/eremius/assets/47860067/ea62bfe9-3d24-4453-b88d-b0e5ee83cc4d)
+
 an assembler, emulator, and debugger for a subset of the ARM assembly language
 
 ### 🚧 This project is a work in progress 🚧
