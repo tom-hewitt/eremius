@@ -1,5 +1,6 @@
 use crate::{preprocessor::PreProcessError, resolver::ResolveError};
 
+#[derive(Debug)]
 pub enum AssemblyError {
     PreProcessError(PreProcessError),
     ResolveError(ResolveError),

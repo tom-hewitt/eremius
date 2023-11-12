@@ -20,6 +20,7 @@ use crate::{
     preprocessor::{PreProcessResult, PreProcessedStatement},
 };
 
+#[derive(Debug)]
 pub enum ResolveError {
     SymbolNotFound(SymbolNotFoundError),
     UnencodableSignedValue(UnencodableValueError<i32>),
@@ -52,6 +53,7 @@ pub enum ResolvedStatement {
     Data(SmallVec<[u8; 4]>),
 }
 
+#[derive(Debug)]
 pub struct SymbolNotFoundError;
 
 #[derive(Debug)]

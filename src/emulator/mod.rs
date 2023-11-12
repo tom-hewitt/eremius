@@ -18,6 +18,8 @@ use crate::{
     resolver::{ResolvedStatement, SymbolTable},
 };
 
+mod tests;
+
 struct Registers([u32; 16]);
 
 impl RegisterIdentifier for u8 {
@@ -41,7 +43,7 @@ impl<R: RegisterIdentifier> IndexMut<R> for Registers {
 }
 
 struct Emulator {
-    memory: [u8; 0xFFFF],
+    memory: Vec<u8>,
     registers: Registers,
     cpsr: CPSR,
     entry_point: u32,
@@ -57,6 +59,17 @@ struct CPSR {
 }
 
 impl Emulator {
+    fn new() -> Emulator {
+        Emulator {
+            memory: vec![0; 0xFFFFFFFF],
+            registers: Registers([0; 16]),
+            cpsr: CPSR { n: false, z: false, c: false, v: false },
+            entry_point: 0,
+            symbol_table: SymbolTable::new(),
+            source_map: HashMap::new(),
+        }
+    }
+
     pub fn assemble(&mut self, input: &str) -> Result<(), AssemblyError> {
         let PreProcessResult {
             entry_point,
