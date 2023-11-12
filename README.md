@@ -40,9 +40,9 @@ Feel free to get in touch or raise a github issue, and check back soon for updat
 | Assembler Directive | [DEFW](#defw---define-words)           | ✅     |
 |                     | [DEFB](#defb---define-byte)            | ✅     |
 |                     | [DEFS](#defs---define-space)           | ✅     |
-|                     | [ORIGIN](#origin---set-origin-address) | 🚧     |
+|                     | [ORIGIN](#origin---set-origin-address) | ✅     |
 |                     | [ALIGN](#align---align-address)        | ✅     |
-|                     | [ENTRY](#entry---set-entry-point)      | 🚧     |
+|                     | [ENTRY](#entry---set-entry-point)      | ✅     |
 |                     | [EQU](#equ---equals)                   | ✅     |
 
 ## Condition Flags
