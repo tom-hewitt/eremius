@@ -2,6 +2,24 @@
 
 an assembler, emulator, and debugger for a subset of the ARM assembly language
 
+### 🚧 This project is a work in progress 🚧
+
+- ✅ The assembler is (mostly!) complete for the chosen subset of the specification.
+- 🚧 The emulator is in the middle of a rewrite to align its functionality with the exact behaviour specified in the ARM manual, so isn't currently fully functional.
+- 🚧 There is an accompanying browser-based debugger that is currently in a different repository - I'm working on polishing it up and then I'm planning to integrate the entire project into a single monorepo.
+
+Feel free to get in touch or raise a github issue, and check back soon for updates!
+
+## Contents
+
+1. [Supported Mnemonics](#supported-mnemonics)
+2. [Condition Flags](#condition-flags)
+3. [Operands](#operands)
+4. [Labels](#labels)
+5. [Instructions](#instructions)
+6. [Assembler Overview](#assembler-overview)
+7. [Testing](#testing)
+
 ## Supported Mnemonics
 
 | Category            | Mnemonic                               | Status |
@@ -78,6 +96,9 @@ There are also 3 types of offset:
 
 The 9 combinations of these formats form the 9 possible addressing modes.
 
+## Labels
+A Label is a program-relative address that can be assigned to any line in the program.
+
 ## Instructions
 ### B - Branch
 Causes a branch to a target address.
@@ -88,7 +109,7 @@ B{L}{<cond>} <target_address>
 
 #### Flags
 |        | Behaviour |
-| ------ | --------- |-----------|
+| ------ | --------- |
 |`L`     | Specifies that the instruction should store a return address in the link register (R14) |
 |`<cond>`| Specifies under what circumstances the instruction should be executed (see [Condition Flags](#condition-flags))|
 
@@ -478,11 +499,8 @@ discount EQU 100
 SUB R5, R2, #discount
 ```
 
-## Testing
-There are some snapshot tests to check for regressions. These can be run using the `cargo test` command.
-
-## Assembler
-The Assembler is broken down into multiple stages and uses multiple intermediate representations. I've found this makes the code more modular and easier to reason about. These are mostly zero-cost abstractions as they make heavy use of Rust Iterators. There is only one point where we have to take into account the entire program, which the symbol resolution step. This is the only intermediate
+## Assembler Overview
+The Assembler is broken down into multiple stages and uses multiple intermediate representations. I've found this makes the code more modular and easier to reason about. These are mostly zero-cost abstractions as they make heavy use of Rust Iterators. There is only one point where we have to take into account the entire program, which is the symbol resolution step. This is the only intermediate step where we make a complete pass of the program - it can still be considered a two-pass process, like most assemblers.
 
 ### Step 1 - Lexer
 Converts a string to tokens.
@@ -539,5 +557,5 @@ The LIR is a one-to-one structured representation of the machine code. This is a
 ### Step 5 - Encoder
 Converts Instructions and Data into 32-bit words.
 
-## Labels
-A Label is a program-relative address that can be assigned to any line in the program.
+## Testing
+There are some snapshot tests to check for regressions. These can be run using the `cargo test` command.
