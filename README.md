@@ -12,6 +12,9 @@ an assembler, emulator, and debugger for a subset of the ARM assembly language
 
 Feel free to get in touch or raise a github issue, and check back soon for updates!
 
+## What's in a name?
+eremius' predecessors _Komodo_, _Perentie_, and _Bennett_, developed at the University of Manchester, are all named after monitor lizards. _Varanus Eremius_ is the latin name for the Rusty Desert Monitor Lizard - a nod to the project's predecessors and it's implementation language.
+
 ## Contents
 
 1. [Supported Mnemonics](#supported-mnemonics)
